@@ -1,0 +1,41 @@
+{
+    "top_keywords_per_cluster": {
+        "0": [
+            "women",
+            "GCR",
+            "GCR",
+            "April",
+            "Terrestrially"
+        ],
+        "1": [
+            "SAHS",
+            "ROS",
+            "UPR",
+            "proteins",
+            "Light"
+        ],
+        "2": [
+            "Back",
+            "Back",
+            "Back",
+            "Back",
+            "Back"
+        ],
+        "3": [
+            "FVIII",
+            "FVIII",
+            "FVIII",
+            "FVIII",
+            "HTS"
+        ],
+        "4": [
+            "hASCs",
+            "lunar",
+            "cell",
+            "HLU",
+            "research"
+        ]
+    },
+    "knowledge_gaps": [],
+    "num_clusters": 5
+}

@@ -1,0 +1,10 @@
+pandas
+transformers
+sentencepiece
+accelerate
+torch
+tqdm
+sentence-transformers
+scikit-learn
+yake
+sqlalchemy
