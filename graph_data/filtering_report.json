@@ -1,0 +1,183 @@
+{
+  "filtering_threshold": 20,
+  "original_stats": {
+    "entities": 593,
+    "relations": 1303,
+    "isolated_entities": 289
+  },
+  "filtered_stats": {
+    "entities": 107,
+    "relations": 758,
+    "isolated_entities": 0,
+    "avg_relations_per_entity": 14.17,
+    "graph_density_percent": 6.68
+  },
+  "reduction": {
+    "entities_removed": 486,
+    "entities_removed_percent": 82.0,
+    "relations_removed": 545,
+    "relations_removed_percent": 41.8
+  },
+  "top_entities_by_score": [
+    {
+      "entity_id": "E00385",
+      "name": "spaceflight",
+      "type": "condition",
+      "score": 302.5,
+      "papers": 24,
+      "relations": 134
+    },
+    {
+      "entity_id": "E00382",
+      "name": "microgravity",
+      "type": "condition",
+      "score": 208.5,
+      "papers": 15,
+      "relations": 93
+    },
+    {
+      "entity_id": "E00516",
+      "name": "root",
+      "type": "tissue",
+      "score": 127.5,
+      "papers": 6,
+      "relations": 57
+    },
+    {
+      "entity_id": "E00499",
+      "name": "bone",
+      "type": "tissue",
+      "score": 125.5,
+      "papers": 10,
+      "relations": 54
+    },
+    {
+      "entity_id": "E00386",
+      "name": "radiation",
+      "type": "condition",
+      "score": 115.0,
+      "papers": 12,
+      "relations": 47
+    },
+    {
+      "entity_id": "E00190",
+      "name": "cell",
+      "type": "cell_type",
+      "score": 106.5,
+      "papers": 19,
+      "relations": 37
+    },
+    {
+      "entity_id": "E00001",
+      "name": "mouse",
+      "type": "organism",
+      "score": 101.5,
+      "papers": 20,
+      "relations": 37
+    },
+    {
+      "entity_id": "E00318",
+      "name": "ros",
+      "type": "chemical",
+      "score": 89.5,
+      "papers": 4,
+      "relations": 39
+    },
+    {
+      "entity_id": "E00387",
+      "name": "space radiation",
+      "type": "condition",
+      "score": 84.0,
+      "papers": 7,
+      "relations": 34
+    },
+    {
+      "entity_id": "E00510",
+      "name": "cardiovascular",
+      "type": "tissue",
+      "score": 82.0,
+      "papers": 3,
+      "relations": 35
+    },
+    {
+      "entity_id": "E00448",
+      "name": "ebl",
+      "type": "disease",
+      "score": 81.5,
+      "papers": 1,
+      "relations": 38
+    },
+    {
+      "entity_id": "E00269",
+      "name": "cpcs",
+      "type": "cell_type",
+      "score": 69.0,
+      "papers": 1,
+      "relations": 31
+    },
+    {
+      "entity_id": "E00312",
+      "name": "fyn",
+      "type": "chemical",
+      "score": 65.0,
+      "papers": 1,
+      "relations": 29
+    },
+    {
+      "entity_id": "E00296",
+      "name": "56fe",
+      "type": "chemical",
+      "score": 62.5,
+      "papers": 1,
+      "relations": 27
+    },
+    {
+      "entity_id": "E00207",
+      "name": "dna",
+      "type": "cell_type",
+      "score": 62.0,
+      "papers": 9,
+      "relations": 22
+    },
+    {
+      "entity_id": "E00234",
+      "name": "f-actin",
+      "type": "cell_type",
+      "score": 61.5,
+      "papers": 1,
+      "relations": 28
+    },
+    {
+      "entity_id": "E00408",
+      "name": "infections",
+      "type": "disease",
+      "score": 59.0,
+      "papers": 5,
+      "relations": 24
+    },
+    {
+      "entity_id": "E00401",
+      "name": "bone loss",
+      "type": "disease",
+      "score": 58.5,
+      "papers": 4,
+      "relations": 25
+    },
+    {
+      "entity_id": "E00330",
+      "name": "latb",
+      "type": "chemical",
+      "score": 57.5,
+      "papers": 1,
+      "relations": 26
+    },
+    {
+      "entity_id": "E00553",
+      "name": "soleus",
+      "type": "tissue",
+      "score": 54.0,
+      "papers": 1,
+      "relations": 25
+    }
+  ]
+}

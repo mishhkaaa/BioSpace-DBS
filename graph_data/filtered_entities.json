@@ -1,0 +1,1645 @@
+[
+  {
+    "entity_id": "E00001",
+    "name": "mouse",
+    "type": "organism",
+    "synonyms": [
+      "mice",
+      "Mouse",
+      "Mice",
+      "mouse"
+    ],
+    "papers": [
+      "PMC3890248",
+      "PMC6124165",
+      "PMC6915713",
+      "PMC8509868",
+      "PMC11579474",
+      "PMC10789781",
+      "PMC9576569",
+      "PMC11271499",
+      "PMC11929063",
+      "PMC6222041",
+      "PMC11063234",
+      "PMC5666799",
+      "PMC5826609",
+      "PMC3630201",
+      "PMC6366624",
+      "PMC8396460",
+      "PMC5761896",
+      "PMC5736159",
+      "PMC4136787",
+      "PMC5955502"
+    ],
+    "importance_score": 101.5,
+    "relation_count": 37
+  },
+  {
+    "entity_id": "E00026",
+    "name": "patients",
+    "type": "organism",
+    "synonyms": [
+      "patients"
+    ],
+    "papers": [
+      "PMC11929063",
+      "PMC10772081"
+    ],
+    "importance_score": 27.5,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00049",
+    "name": "e",
+    "type": "organism",
+    "synonyms": [
+      "E."
+    ],
+    "papers": [
+      "PMC3558598"
+    ],
+    "importance_score": 35.5,
+    "relation_count": 15
+  },
+  {
+    "entity_id": "E00057",
+    "name": "cdkn1a/p21",
+    "type": "gene",
+    "synonyms": [
+      "CDKN1a/p21"
+    ],
+    "papers": [
+      "PMC3630201"
+    ],
+    "importance_score": 31.5,
+    "relation_count": 13
+  },
+  {
+    "entity_id": "E00060",
+    "name": "trp53",
+    "type": "gene",
+    "synonyms": [
+      "Trp53"
+    ],
+    "papers": [
+      "PMC3630201",
+      "PMC8396460"
+    ],
+    "importance_score": 21.5,
+    "relation_count": 9
+  },
+  {
+    "entity_id": "E00063",
+    "name": "collagen",
+    "type": "gene",
+    "synonyms": [
+      "collagen",
+      "Collagen"
+    ],
+    "papers": [
+      "PMC6813909",
+      "PMC7998608"
+    ],
+    "importance_score": 34.5,
+    "relation_count": 14
+  },
+  {
+    "entity_id": "E00067",
+    "name": "myc",
+    "type": "gene",
+    "synonyms": [
+      "Myc",
+      "MYC"
+    ],
+    "papers": [
+      "PMC8396460",
+      "PMC7998608"
+    ],
+    "importance_score": 44.5,
+    "relation_count": 19
+  },
+  {
+    "entity_id": "E00069",
+    "name": "nfe2l2",
+    "type": "gene",
+    "synonyms": [
+      "Nfe2l2"
+    ],
+    "papers": [
+      "PMC8396460"
+    ],
+    "importance_score": 26.0,
+    "relation_count": 11
+  },
+  {
+    "entity_id": "E00070",
+    "name": "nrf2",
+    "type": "gene",
+    "synonyms": [
+      "Nrf2"
+    ],
+    "papers": [
+      "PMC8396460"
+    ],
+    "importance_score": 26.0,
+    "relation_count": 11
+  },
+  {
+    "entity_id": "E00071",
+    "name": "nox1",
+    "type": "gene",
+    "synonyms": [
+      "Nox1"
+    ],
+    "papers": [
+      "PMC8396460"
+    ],
+    "importance_score": 36.0,
+    "relation_count": 16
+  },
+  {
+    "entity_id": "E00072",
+    "name": "ptgs2",
+    "type": "gene",
+    "synonyms": [
+      "Ptgs2"
+    ],
+    "papers": [
+      "PMC8396460"
+    ],
+    "importance_score": 30.0,
+    "relation_count": 13
+  },
+  {
+    "entity_id": "E00073",
+    "name": "cdkn1a",
+    "type": "gene",
+    "synonyms": [
+      "Cdkn1a"
+    ],
+    "papers": [
+      "PMC8396460"
+    ],
+    "importance_score": 32.0,
+    "relation_count": 14
+  },
+  {
+    "entity_id": "E00074",
+    "name": "p21",
+    "type": "gene",
+    "synonyms": [
+      "p21"
+    ],
+    "papers": [
+      "PMC8396460"
+    ],
+    "importance_score": 38.0,
+    "relation_count": 17
+  },
+  {
+    "entity_id": "E00075",
+    "name": "tnf",
+    "type": "gene",
+    "synonyms": [
+      "Tnf"
+    ],
+    "papers": [
+      "PMC8396460"
+    ],
+    "importance_score": 34.0,
+    "relation_count": 15
+  },
+  {
+    "entity_id": "E00087",
+    "name": "tno1",
+    "type": "gene",
+    "synonyms": [
+      "TNO1"
+    ],
+    "papers": [
+      "PMC5387210",
+      "PMC4642138"
+    ],
+    "importance_score": 21.0,
+    "relation_count": 8
+  },
+  {
+    "entity_id": "E00106",
+    "name": "filamentous-actin",
+    "type": "gene",
+    "synonyms": [
+      "filamentous-actin"
+    ],
+    "papers": [
+      "PMC7010715"
+    ],
+    "importance_score": 20.0,
+    "relation_count": 8
+  },
+  {
+    "entity_id": "E00109",
+    "name": "gcamp3",
+    "type": "gene",
+    "synonyms": [
+      "GCaMP3"
+    ],
+    "papers": [
+      "PMC7503278"
+    ],
+    "importance_score": 44.0,
+    "relation_count": 20
+  },
+  {
+    "entity_id": "E00132",
+    "name": "er",
+    "type": "gene",
+    "synonyms": [
+      "ER"
+    ],
+    "papers": [
+      "PMC3818365",
+      "PMC4618186",
+      "PMC4064004",
+      "PMC6289879"
+    ],
+    "importance_score": 20.5,
+    "relation_count": 6
+  },
+  {
+    "entity_id": "E00144",
+    "name": "buoe",
+    "type": "gene",
+    "synonyms": [
+      "BuOE"
+    ],
+    "papers": [
+      "PMC11271499"
+    ],
+    "importance_score": 39.5,
+    "relation_count": 17
+  },
+  {
+    "entity_id": "E00146",
+    "name": "yap1",
+    "type": "gene",
+    "synonyms": [
+      "YAP1"
+    ],
+    "papers": [
+      "PMC6062551"
+    ],
+    "importance_score": 34.0,
+    "relation_count": 15
+  },
+  {
+    "entity_id": "E00147",
+    "name": "rhoa",
+    "type": "gene",
+    "synonyms": [
+      "RHOA"
+    ],
+    "papers": [
+      "PMC6062551"
+    ],
+    "importance_score": 34.0,
+    "relation_count": 15
+  },
+  {
+    "entity_id": "E00153",
+    "name": "plcg1",
+    "type": "gene",
+    "synonyms": [
+      "PLCG1"
+    ],
+    "papers": [
+      "PMC6062551"
+    ],
+    "importance_score": 34.0,
+    "relation_count": 15
+  },
+  {
+    "entity_id": "E00155",
+    "name": "vwf",
+    "type": "gene",
+    "synonyms": [
+      "VWF"
+    ],
+    "papers": [
+      "PMC6062551"
+    ],
+    "importance_score": 30.0,
+    "relation_count": 13
+  },
+  {
+    "entity_id": "E00157",
+    "name": "bmp",
+    "type": "gene",
+    "synonyms": [
+      "Bmp"
+    ],
+    "papers": [
+      "PMC6062551"
+    ],
+    "importance_score": 28.0,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00158",
+    "name": "tbx",
+    "type": "gene",
+    "synonyms": [
+      "Tbx"
+    ],
+    "papers": [
+      "PMC6062551"
+    ],
+    "importance_score": 28.0,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00161",
+    "name": "cd11b",
+    "type": "gene",
+    "synonyms": [
+      "CD11b"
+    ],
+    "papers": [
+      "PMC3570223"
+    ],
+    "importance_score": 32.0,
+    "relation_count": 14
+  },
+  {
+    "entity_id": "E00174",
+    "name": "ig",
+    "type": "gene",
+    "synonyms": [
+      "Ig"
+    ],
+    "papers": [
+      "PMC5736159",
+      "PMC5826609"
+    ],
+    "importance_score": 21.0,
+    "relation_count": 8
+  },
+  {
+    "entity_id": "E00181",
+    "name": "fviii",
+    "type": "gene",
+    "synonyms": [
+      "FVIII"
+    ],
+    "papers": [
+      "PMC11929063"
+    ],
+    "importance_score": 26.5,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00185",
+    "name": "cellular",
+    "type": "cell_type",
+    "synonyms": [
+      "cellular",
+      "Cellular"
+    ],
+    "papers": [
+      "PMC11988870",
+      "PMC4064004",
+      "PMC4136787",
+      "PMC5415411",
+      "PMC9832585",
+      "PMC3818365",
+      "PMC6813909",
+      "PMC4642138",
+      "PMC6062551"
+    ],
+    "importance_score": 20.0,
+    "relation_count": 4
+  },
+  {
+    "entity_id": "E00187",
+    "name": "osteoclasts",
+    "type": "cell_type",
+    "synonyms": [
+      "osteoblasts",
+      "osteoclast",
+      "osteoblast",
+      "osteoclasts"
+    ],
+    "papers": [
+      "PMC3630201",
+      "PMC11579474"
+    ],
+    "importance_score": 38.5,
+    "relation_count": 16
+  },
+  {
+    "entity_id": "E00190",
+    "name": "cell",
+    "type": "cell_type",
+    "synonyms": [
+      "cell",
+      "Cell",
+      "cells"
+    ],
+    "papers": [
+      "PMC3890248",
+      "PMC7503278",
+      "PMC11127935",
+      "PMC10789781",
+      "PMC3558598",
+      "PMC7010715",
+      "PMC6062551",
+      "PMC11930778",
+      "PMC5666799",
+      "PMC3289768",
+      "PMC3630201",
+      "PMC5587110",
+      "PMC8396460",
+      "PMC3570223",
+      "PMC4064004",
+      "PMC8716943",
+      "PMC7998608",
+      "PMC3818365",
+      "PMC6289879"
+    ],
+    "importance_score": 106.5,
+    "relation_count": 37
+  },
+  {
+    "entity_id": "E00194",
+    "name": "macrophage",
+    "type": "cell_type",
+    "synonyms": [
+      "macrophages",
+      "Macrophage",
+      "macrophage"
+    ],
+    "papers": [
+      "PMC3890248",
+      "PMC11988870",
+      "PMC3570223",
+      "PMC3558598"
+    ],
+    "importance_score": 29.0,
+    "relation_count": 11
+  },
+  {
+    "entity_id": "E00200",
+    "name": "endothelial",
+    "type": "cell_type",
+    "synonyms": [
+      "endothelial"
+    ],
+    "papers": [
+      "PMC11988870"
+    ],
+    "importance_score": 22.5,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00206",
+    "name": "hascs",
+    "type": "cell_type",
+    "synonyms": [
+      "hASCs"
+    ],
+    "papers": [
+      "PMC7998608"
+    ],
+    "importance_score": 43.5,
+    "relation_count": 19
+  },
+  {
+    "entity_id": "E00207",
+    "name": "dna",
+    "type": "cell_type",
+    "synonyms": [
+      "cdna",
+      "DNA"
+    ],
+    "papers": [
+      "PMC11166944",
+      "PMC10789781",
+      "PMC5826609",
+      "PMC5955502",
+      "PMC4033213",
+      "PMC5587110",
+      "PMC6366624",
+      "PMC11929063",
+      "PMC6062551"
+    ],
+    "importance_score": 62.0,
+    "relation_count": 22
+  },
+  {
+    "entity_id": "E00209",
+    "name": "cell cycle/apoptosis-related",
+    "type": "cell_type",
+    "synonyms": [
+      "cell cycle/apoptosis-related"
+    ],
+    "papers": [
+      "PMC8396460"
+    ],
+    "importance_score": 38.0,
+    "relation_count": 17
+  },
+  {
+    "entity_id": "E00223",
+    "name": "chromosomal",
+    "type": "cell_type",
+    "synonyms": [
+      "chromosomal",
+      "Chromosomal",
+      "chromosome"
+    ],
+    "papers": [
+      "PMC5761896",
+      "PMC10789781"
+    ],
+    "importance_score": 37.0,
+    "relation_count": 16
+  },
+  {
+    "entity_id": "E00224",
+    "name": "cell nucleus",
+    "type": "cell_type",
+    "synonyms": [
+      "cell nucleus"
+    ],
+    "papers": [
+      "PMC10789781"
+    ],
+    "importance_score": 20.0,
+    "relation_count": 8
+  },
+  {
+    "entity_id": "E00233",
+    "name": "actin",
+    "type": "cell_type",
+    "synonyms": [
+      "actin"
+    ],
+    "papers": [
+      "PMC8716943"
+    ],
+    "importance_score": 28.0,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00234",
+    "name": "f-actin",
+    "type": "cell_type",
+    "synonyms": [
+      "F-actin"
+    ],
+    "papers": [
+      "PMC7010715"
+    ],
+    "importance_score": 61.5,
+    "relation_count": 28
+  },
+  {
+    "entity_id": "E00235",
+    "name": "chemically-fixed z",
+    "type": "cell_type",
+    "synonyms": [
+      "chemically-fixed Z."
+    ],
+    "papers": [
+      "PMC7010715"
+    ],
+    "importance_score": 36.0,
+    "relation_count": 16
+  },
+  {
+    "entity_id": "E00252",
+    "name": "hair cells",
+    "type": "cell_type",
+    "synonyms": [
+      "hair cell",
+      "hair cells",
+      "Hair cells"
+    ],
+    "papers": [
+      "PMC5899691",
+      "PMC6204554"
+    ],
+    "importance_score": 41.0,
+    "relation_count": 18
+  },
+  {
+    "entity_id": "E00263",
+    "name": "cytoskeletal",
+    "type": "cell_type",
+    "synonyms": [
+      "cytoskeletal"
+    ],
+    "papers": [
+      "PMC6062551",
+      "PMC5955502"
+    ],
+    "importance_score": 22.5,
+    "relation_count": 8
+  },
+  {
+    "entity_id": "E00269",
+    "name": "cpcs",
+    "type": "cell_type",
+    "synonyms": [
+      "CPCs"
+    ],
+    "papers": [
+      "PMC6062551"
+    ],
+    "importance_score": 69.0,
+    "relation_count": 31
+  },
+  {
+    "entity_id": "E00271",
+    "name": "mesendodermal",
+    "type": "cell_type",
+    "synonyms": [
+      "mesendodermal"
+    ],
+    "papers": [
+      "PMC6062551"
+    ],
+    "importance_score": 30.0,
+    "relation_count": 13
+  },
+  {
+    "entity_id": "E00276",
+    "name": "hemocytes",
+    "type": "cell_type",
+    "synonyms": [
+      "hemocytes"
+    ],
+    "papers": [
+      "PMC3558598"
+    ],
+    "importance_score": 30.0,
+    "relation_count": 13
+  },
+  {
+    "entity_id": "E00290",
+    "name": "calcium",
+    "type": "chemical",
+    "synonyms": [
+      "Calcium",
+      "calcium"
+    ],
+    "papers": [
+      "PMC11988870",
+      "PMC7503278"
+    ],
+    "importance_score": 23.0,
+    "relation_count": 9
+  },
+  {
+    "entity_id": "E00291",
+    "name": "lipid",
+    "type": "chemical",
+    "synonyms": [
+      "lipid",
+      "lipids"
+    ],
+    "papers": [
+      "PMC11988870",
+      "PMC4064004",
+      "PMC6915713"
+    ],
+    "importance_score": 25.5,
+    "relation_count": 9
+  },
+  {
+    "entity_id": "E00292",
+    "name": "microspheres",
+    "type": "chemical",
+    "synonyms": [
+      "Microspheres",
+      "microspheres"
+    ],
+    "papers": [
+      "PMC7998608"
+    ],
+    "importance_score": 26.0,
+    "relation_count": 11
+  },
+  {
+    "entity_id": "E00296",
+    "name": "56fe",
+    "type": "chemical",
+    "synonyms": [
+      "56Fe"
+    ],
+    "papers": [
+      "PMC5666799"
+    ],
+    "importance_score": 62.5,
+    "relation_count": 27
+  },
+  {
+    "entity_id": "E00298",
+    "name": "high-let",
+    "type": "chemical",
+    "synonyms": [
+      "high-LET"
+    ],
+    "papers": [
+      "PMC10789781",
+      "PMC5666799"
+    ],
+    "importance_score": 45.0,
+    "relation_count": 20
+  },
+  {
+    "entity_id": "E00299",
+    "name": "high-let 56fe",
+    "type": "chemical",
+    "synonyms": [
+      "high-LET 56Fe"
+    ],
+    "papers": [
+      "PMC5666799"
+    ],
+    "importance_score": 24.0,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00301",
+    "name": "protons",
+    "type": "chemical",
+    "synonyms": [
+      "protons"
+    ],
+    "papers": [
+      "PMC6387434",
+      "PMC5666799",
+      "PMC7072278"
+    ],
+    "importance_score": 40.0,
+    "relation_count": 17
+  },
+  {
+    "entity_id": "E00303",
+    "name": "low-let",
+    "type": "chemical",
+    "synonyms": [
+      "low-LET"
+    ],
+    "papers": [
+      "PMC10789781",
+      "PMC5666799"
+    ],
+    "importance_score": 29.0,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00309",
+    "name": "auxin",
+    "type": "chemical",
+    "synonyms": [
+      "auxin",
+      "Auxin"
+    ],
+    "papers": [
+      "PMC8716943",
+      "PMC4642138"
+    ],
+    "importance_score": 34.5,
+    "relation_count": 14
+  },
+  {
+    "entity_id": "E00312",
+    "name": "fyn",
+    "type": "chemical",
+    "synonyms": [
+      "FYN"
+    ],
+    "papers": [
+      "PMC6387434"
+    ],
+    "importance_score": 65.0,
+    "relation_count": 29
+  },
+  {
+    "entity_id": "E00316",
+    "name": "long-term",
+    "type": "chemical",
+    "synonyms": [
+      "Long-Term"
+    ],
+    "papers": [
+      "PMC6387434"
+    ],
+    "importance_score": 22.5,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00317",
+    "name": "reactive oxygen species",
+    "type": "chemical",
+    "synonyms": [
+      "Reactive Oxygen Species",
+      "reactive oxygen species"
+    ],
+    "papers": [
+      "PMC6387434",
+      "PMC6289879",
+      "PMC8816950"
+    ],
+    "importance_score": 51.0,
+    "relation_count": 21
+  },
+  {
+    "entity_id": "E00318",
+    "name": "ros",
+    "type": "chemical",
+    "synonyms": [
+      "ROS",
+      "rons"
+    ],
+    "papers": [
+      "PMC6387434",
+      "PMC6289879",
+      "PMC11271499",
+      "PMC8816950"
+    ],
+    "importance_score": 89.5,
+    "relation_count": 39
+  },
+  {
+    "entity_id": "E00320",
+    "name": "56fe, 28si",
+    "type": "chemical",
+    "synonyms": [
+      "56Fe, 28Si"
+    ],
+    "papers": [
+      "PMC10789781"
+    ],
+    "importance_score": 28.0,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00328",
+    "name": "epi-brassinolide",
+    "type": "chemical",
+    "synonyms": [
+      "Epi-brassinolide"
+    ],
+    "papers": [
+      "PMC7010715"
+    ],
+    "importance_score": 20.5,
+    "relation_count": 9
+  },
+  {
+    "entity_id": "E00330",
+    "name": "latb",
+    "type": "chemical",
+    "synonyms": [
+      "LatB.",
+      "LatB"
+    ],
+    "papers": [
+      "PMC7010715"
+    ],
+    "importance_score": 57.5,
+    "relation_count": 26
+  },
+  {
+    "entity_id": "E00354",
+    "name": "hze",
+    "type": "chemical",
+    "synonyms": [
+      "HZE"
+    ],
+    "papers": [
+      "PMC5116466",
+      "PMC4033213"
+    ],
+    "importance_score": 27.5,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00360",
+    "name": "serca",
+    "type": "chemical",
+    "synonyms": [
+      "SERCA"
+    ],
+    "papers": [
+      "PMC11271499"
+    ],
+    "importance_score": 44.0,
+    "relation_count": 20
+  },
+  {
+    "entity_id": "E00361",
+    "name": "ionophore",
+    "type": "chemical",
+    "synonyms": [
+      "ionophore"
+    ],
+    "papers": [
+      "PMC11271499"
+    ],
+    "importance_score": 34.0,
+    "relation_count": 15
+  },
+  {
+    "entity_id": "E00362",
+    "name": "4-hne",
+    "type": "chemical",
+    "synonyms": [
+      "4-HNE"
+    ],
+    "papers": [
+      "PMC11271499"
+    ],
+    "importance_score": 24.0,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00376",
+    "name": "uck2",
+    "type": "chemical",
+    "synonyms": [
+      "Uck2"
+    ],
+    "papers": [
+      "PMC3558598"
+    ],
+    "importance_score": 30.0,
+    "relation_count": 13
+  },
+  {
+    "entity_id": "E00380",
+    "name": "plasma fviii",
+    "type": "chemical",
+    "synonyms": [
+      "plasma FVIII"
+    ],
+    "papers": [
+      "PMC11929063"
+    ],
+    "importance_score": 26.5,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00382",
+    "name": "microgravity",
+    "type": "condition",
+    "synonyms": [
+      "microgravity",
+      "Microgravity"
+    ],
+    "papers": [
+      "PMC8509868",
+      "PMC10996920",
+      "PMC11988870",
+      "PMC4136787",
+      "PMC3901686",
+      "PMC7998608",
+      "PMC7000411",
+      "PMC7787258",
+      "PMC6915713",
+      "PMC3630201",
+      "PMC11271499",
+      "PMC5587110",
+      "PMC9267413",
+      "PMC8396460",
+      "PMC11579474"
+    ],
+    "importance_score": 208.5,
+    "relation_count": 93
+  },
+  {
+    "entity_id": "E00384",
+    "name": "international space station",
+    "type": "condition",
+    "synonyms": [
+      "International Space Station",
+      "international space station"
+    ],
+    "papers": [
+      "PMC6387434",
+      "PMC9400218",
+      "PMC5736159",
+      "PMC5826609",
+      "PMC7000411",
+      "PMC6915713",
+      "PMC5955502",
+      "PMC7829349",
+      "PMC11271499",
+      "PMC5587110",
+      "PMC11579474",
+      "PMC6062551"
+    ],
+    "importance_score": 21.0,
+    "relation_count": 3
+  },
+  {
+    "entity_id": "E00385",
+    "name": "spaceflight",
+    "type": "condition",
+    "synonyms": [
+      "space flight",
+      "Spaceflight",
+      "spaceflight"
+    ],
+    "papers": [
+      "PMC3890248",
+      "PMC6915713",
+      "PMC8441986",
+      "PMC11579474",
+      "PMC6387434",
+      "PMC10996920",
+      "PMC11166944",
+      "PMC9576569",
+      "PMC11271499",
+      "PMC6062551",
+      "PMC7072278",
+      "PMC5826609",
+      "PMC3901686",
+      "PMC7000411",
+      "PMC9267413",
+      "PMC8396460",
+      "PMC11166946",
+      "PMC3570223",
+      "PMC5672023",
+      "PMC5736159",
+      "PMC5460236",
+      "PMC5955502",
+      "PMC10285634",
+      "PMC4653813"
+    ],
+    "importance_score": 302.5,
+    "relation_count": 134
+  },
+  {
+    "entity_id": "E00386",
+    "name": "radiation",
+    "type": "condition",
+    "synonyms": [
+      "Radiation",
+      "radiation"
+    ],
+    "papers": [
+      "PMC6387434",
+      "PMC5116466",
+      "PMC11166944",
+      "PMC7072278",
+      "PMC11063234",
+      "PMC10789781",
+      "PMC5666799",
+      "PMC9832585",
+      "PMC6915713",
+      "PMC4033213",
+      "PMC9267413",
+      "PMC6813909"
+    ],
+    "importance_score": 115.0,
+    "relation_count": 47
+  },
+  {
+    "entity_id": "E00387",
+    "name": "space radiation",
+    "type": "condition",
+    "synonyms": [
+      "space radiation",
+      "Space Radiation",
+      "Space radiation"
+    ],
+    "papers": [
+      "PMC6387434",
+      "PMC11166944",
+      "PMC7072278",
+      "PMC11063234",
+      "PMC5666799",
+      "PMC9832585",
+      "PMC6915713"
+    ],
+    "importance_score": 84.0,
+    "relation_count": 34
+  },
+  {
+    "entity_id": "E00388",
+    "name": "ionizing radiation",
+    "type": "condition",
+    "synonyms": [
+      "Ionizing radiation",
+      "ionizing radiation",
+      "Ionizing Radiation"
+    ],
+    "papers": [
+      "PMC7072278",
+      "PMC11063234",
+      "PMC10789781",
+      "PMC5666799",
+      "PMC9267413",
+      "PMC6813909"
+    ],
+    "importance_score": 24.5,
+    "relation_count": 7
+  },
+  {
+    "entity_id": "E00390",
+    "name": "cosmic radiation",
+    "type": "condition",
+    "synonyms": [
+      "Cosmic Radiation",
+      "cosmic radiation"
+    ],
+    "papers": [
+      "PMC10789781",
+      "PMC11166944"
+    ],
+    "importance_score": 21.0,
+    "relation_count": 8
+  },
+  {
+    "entity_id": "E00393",
+    "name": "hlu",
+    "type": "condition",
+    "synonyms": [
+      "HLU"
+    ],
+    "papers": [
+      "PMC4118556",
+      "PMC8509868"
+    ],
+    "importance_score": 28.0,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00401",
+    "name": "bone loss",
+    "type": "disease",
+    "synonyms": [
+      "bone loss"
+    ],
+    "papers": [
+      "PMC11988870",
+      "PMC5666799",
+      "PMC3630201",
+      "PMC10285634"
+    ],
+    "importance_score": 58.5,
+    "relation_count": 25
+  },
+  {
+    "entity_id": "E00407",
+    "name": "pelvic",
+    "type": "disease",
+    "synonyms": [
+      "pelvic"
+    ],
+    "papers": [
+      "PMC3630201"
+    ],
+    "importance_score": 20.5,
+    "relation_count": 9
+  },
+  {
+    "entity_id": "E00408",
+    "name": "infections",
+    "type": "disease",
+    "synonyms": [
+      "infections",
+      "infection"
+    ],
+    "papers": [
+      "PMC11988870",
+      "PMC7000411",
+      "PMC3901686",
+      "PMC7829349",
+      "PMC3558598"
+    ],
+    "importance_score": 59.0,
+    "relation_count": 24
+  },
+  {
+    "entity_id": "E00409",
+    "name": "cancer",
+    "type": "disease",
+    "synonyms": [
+      "cancers",
+      "cancer",
+      "Cancer"
+    ],
+    "papers": [
+      "PMC11988870",
+      "PMC9267413",
+      "PMC9832585"
+    ],
+    "importance_score": 26.0,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00411",
+    "name": "tumor",
+    "type": "disease",
+    "synonyms": [
+      "tumor",
+      "tumors"
+    ],
+    "papers": [
+      "PMC11988870",
+      "PMC9832585"
+    ],
+    "importance_score": 24.5,
+    "relation_count": 9
+  },
+  {
+    "entity_id": "E00414",
+    "name": "hepatic",
+    "type": "disease",
+    "synonyms": [
+      "hepatic"
+    ],
+    "papers": [
+      "PMC11988870"
+    ],
+    "importance_score": 22.5,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00417",
+    "name": "atrophy",
+    "type": "disease",
+    "synonyms": [
+      "atrophy"
+    ],
+    "papers": [
+      "PMC8396460"
+    ],
+    "importance_score": 24.0,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00437",
+    "name": "muscle atrophy",
+    "type": "disease",
+    "synonyms": [
+      "muscle atrophy",
+      "Muscle atrophy"
+    ],
+    "papers": [
+      "PMC4118556",
+      "PMC11271499",
+      "PMC9576569"
+    ],
+    "importance_score": 26.0,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00438",
+    "name": "radial layers",
+    "type": "disease",
+    "synonyms": [
+      "radial layers"
+    ],
+    "papers": [
+      "PMC10789781"
+    ],
+    "importance_score": 20.0,
+    "relation_count": 8
+  },
+  {
+    "entity_id": "E00448",
+    "name": "ebl",
+    "type": "disease",
+    "synonyms": [
+      "eBL"
+    ],
+    "papers": [
+      "PMC7010715"
+    ],
+    "importance_score": 81.5,
+    "relation_count": 38
+  },
+  {
+    "entity_id": "E00455",
+    "name": "p",
+    "type": "disease",
+    "synonyms": [
+      "P."
+    ],
+    "papers": [
+      "PMC8816950"
+    ],
+    "importance_score": 38.0,
+    "relation_count": 17
+  },
+  {
+    "entity_id": "E00483",
+    "name": "tnnt2",
+    "type": "disease",
+    "synonyms": [
+      "TNNT2"
+    ],
+    "papers": [
+      "PMC6062551"
+    ],
+    "importance_score": 30.0,
+    "relation_count": 13
+  },
+  {
+    "entity_id": "E00488",
+    "name": "chaffeensis",
+    "type": "disease",
+    "synonyms": [
+      "chaffeensis"
+    ],
+    "papers": [
+      "PMC3558598"
+    ],
+    "importance_score": 24.0,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00493",
+    "name": "hemophilia a. a",
+    "type": "disease",
+    "synonyms": [
+      "hemophilia A. A"
+    ],
+    "papers": [
+      "PMC11929063"
+    ],
+    "importance_score": 26.5,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00497",
+    "name": "tak-754",
+    "type": "disease",
+    "synonyms": [
+      "TAK-754"
+    ],
+    "papers": [
+      "PMC11929063"
+    ],
+    "importance_score": 26.5,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00499",
+    "name": "bone",
+    "type": "tissue",
+    "synonyms": [
+      "bone",
+      "bones",
+      "Bone"
+    ],
+    "papers": [
+      "PMC6124165",
+      "PMC11988870",
+      "PMC5666799",
+      "PMC6222041",
+      "PMC10285634",
+      "PMC3630201",
+      "PMC4118556",
+      "PMC8509868",
+      "PMC6813909",
+      "PMC11579474"
+    ],
+    "importance_score": 125.5,
+    "relation_count": 54
+  },
+  {
+    "entity_id": "E00500",
+    "name": "tissue",
+    "type": "tissue",
+    "synonyms": [
+      "tissue",
+      "tissues"
+    ],
+    "papers": [
+      "PMC10996920",
+      "PMC11988870",
+      "PMC9832585",
+      "PMC5666799",
+      "PMC5736159",
+      "PMC3630201",
+      "PMC3558598",
+      "PMC11929063",
+      "PMC10772081"
+    ],
+    "importance_score": 41.5,
+    "relation_count": 14
+  },
+  {
+    "entity_id": "E00506",
+    "name": "osteoclastic",
+    "type": "tissue",
+    "synonyms": [
+      "osteoclastic"
+    ],
+    "papers": [
+      "PMC3630201"
+    ],
+    "importance_score": 20.5,
+    "relation_count": 9
+  },
+  {
+    "entity_id": "E00507",
+    "name": "organ",
+    "type": "tissue",
+    "synonyms": [
+      "organs",
+      "organ"
+    ],
+    "papers": [
+      "PMC7503278",
+      "PMC11988870",
+      "PMC7998608",
+      "PMC10772081",
+      "PMC4642138"
+    ],
+    "importance_score": 49.5,
+    "relation_count": 20
+  },
+  {
+    "entity_id": "E00508",
+    "name": "cardiac",
+    "type": "tissue",
+    "synonyms": [
+      "Cardiac",
+      "cardiac"
+    ],
+    "papers": [
+      "PMC6387434",
+      "PMC11988870",
+      "PMC7787258",
+      "PMC5955502",
+      "PMC8396460",
+      "PMC6062551"
+    ],
+    "importance_score": 30.5,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00510",
+    "name": "cardiovascular",
+    "type": "tissue",
+    "synonyms": [
+      "cardiovascular"
+    ],
+    "papers": [
+      "PMC11063234",
+      "PMC6387434",
+      "PMC8396460"
+    ],
+    "importance_score": 82.0,
+    "relation_count": 35
+  },
+  {
+    "entity_id": "E00516",
+    "name": "root",
+    "type": "tissue",
+    "synonyms": [
+      "Root",
+      "roots",
+      "root"
+    ],
+    "papers": [
+      "PMC11500582",
+      "PMC7503278",
+      "PMC8716943",
+      "PMC5387210",
+      "PMC7010715",
+      "PMC4642138"
+    ],
+    "importance_score": 127.5,
+    "relation_count": 57
+  },
+  {
+    "entity_id": "E00517",
+    "name": "gravitropism",
+    "type": "tissue",
+    "synonyms": [
+      "Gravitropism"
+    ],
+    "papers": [
+      "PMC4642138"
+    ],
+    "importance_score": 32.0,
+    "relation_count": 14
+  },
+  {
+    "entity_id": "E00521",
+    "name": "muscle",
+    "type": "tissue",
+    "synonyms": [
+      "Muscle",
+      "muscle"
+    ],
+    "papers": [
+      "PMC4118556",
+      "PMC11271499",
+      "PMC9576569",
+      "PMC10285634"
+    ],
+    "importance_score": 38.5,
+    "relation_count": 15
+  },
+  {
+    "entity_id": "E00525",
+    "name": "barrel medic",
+    "type": "tissue",
+    "synonyms": [
+      "barrel medic"
+    ],
+    "papers": [
+      "PMC7010715"
+    ],
+    "importance_score": 24.0,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00526",
+    "name": "hypocotyls",
+    "type": "tissue",
+    "synonyms": [
+      "hypocotyls"
+    ],
+    "papers": [
+      "PMC7010715"
+    ],
+    "importance_score": 22.5,
+    "relation_count": 10
+  },
+  {
+    "entity_id": "E00534",
+    "name": "body",
+    "type": "tissue",
+    "synonyms": [
+      "body"
+    ],
+    "papers": [
+      "PMC4118556"
+    ],
+    "importance_score": 53.5,
+    "relation_count": 24
+  },
+  {
+    "entity_id": "E00553",
+    "name": "soleus",
+    "type": "tissue",
+    "synonyms": [
+      "soleus"
+    ],
+    "papers": [
+      "PMC11271499"
+    ],
+    "importance_score": 54.0,
+    "relation_count": 25
+  },
+  {
+    "entity_id": "E00555",
+    "name": "endothelial-like tube",
+    "type": "tissue",
+    "synonyms": [
+      "endothelial-like tube",
+      "endothelial-like tubes"
+    ],
+    "papers": [
+      "PMC6062551"
+    ],
+    "importance_score": 28.0,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00558",
+    "name": "fat body",
+    "type": "tissue",
+    "synonyms": [
+      "fat body"
+    ],
+    "papers": [
+      "PMC3558598"
+    ],
+    "importance_score": 28.0,
+    "relation_count": 12
+  },
+  {
+    "entity_id": "E00593",
+    "name": "flow cytometry",
+    "type": "assay",
+    "synonyms": [
+      "flow cytometry"
+    ],
+    "papers": [
+      "PMC3570223"
+    ],
+    "importance_score": 44.5,
+    "relation_count": 21
+  }
+]
