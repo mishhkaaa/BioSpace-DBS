@@ -1,7 +1,7 @@
-# nosql/graph_backend.py
+# nosql/neo4j_adapter.py
 """
-Graph database backend using Neo4j.
-Provides programmatic access to the knowledge graph for dashboard integration.
+Neo4j adapter for knowledge graph access.
+Provides programmatic access to the Neo4j knowledge graph for dashboard integration.
 """
 
 from neo4j import GraphDatabase
@@ -13,18 +13,47 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from config.neo4j_config import get_neo4j_config
 
 
-class GraphPlaceholder:
+class Neo4jAdapter:
     """
-    GraphBackend for Neo4j knowledge graph.
-    Connects to Neo4j instance and provides query methods for entities, papers, and relations.
+    Neo4j adapter for knowledge graph access.
+    Connects to Neo4j Aura instance and provides query methods for entities, papers, and relations.
+    
+    Required environment variables:
+        NEO4J_URI: Neo4j connection URI (e.g., neo4j+s://xxxxx.databases.neo4j.io)
+        NEO4J_USER: Neo4j username (typically 'neo4j')
+        NEO4J_PASSWORD: Neo4j password
     """
     
     def __init__(self):
+        """Initialize Neo4j connection. Raises ValueError if credentials are missing."""
         config = get_neo4j_config()
+        
+        # Validate required credentials
+        if not config.get('uri'):
+            raise ValueError(
+                "NEO4J_URI environment variable is required. "
+                "Please set it in your .env file."
+            )
+        if not config.get('password'):
+            raise ValueError(
+                "NEO4J_PASSWORD environment variable is required. "
+                "Please set it in your .env file."
+            )
+        
         self.uri = config['uri']
         self.user = config['user']
         self.password = config['password']
-        self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
+        
+        try:
+            self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
+            # Verify connection
+            self.driver.verify_connectivity()
+        except Exception as e:
+            raise ConnectionError(
+                f"Failed to connect to Neo4j at {self.uri}. "
+                f"Error: {str(e)}. "
+                f"Please check your NEO4J_URI, NEO4J_USER, and NEO4J_PASSWORD."
+            )
     
     def close(self):
         """Close the Neo4j driver connection."""

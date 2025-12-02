@@ -8,12 +8,14 @@ Unified Query Engine — routes user queries to:
 """
 
 import re
+import warnings
+from functools import lru_cache
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 from pathlib import Path
 
 from sql.models import Paper, Summary, Keyword, Cluster
-from nosql.graph_placeholder import GraphPlaceholder
+from nosql import GraphClient  # Hot-swappable adapter
 
 # -----------------------------------
 # DB + Graph initialization
@@ -23,7 +25,35 @@ DB_PATH = Path(__file__).resolve().parents[1] / "sql" / "space_bio.db"
 engine = create_engine(f"sqlite:///{DB_PATH}")
 Session = sessionmaker(bind=engine)
 
-graph = GraphPlaceholder()
+# Initialize graph client (adapter pattern - Neo4j or placeholder based on KG_ADAPTER env var)
+try:
+    graph = GraphClient()
+except Exception as e:
+    warnings.warn(f"Failed to initialize graph client: {e}. Graph features will be unavailable.", RuntimeWarning)
+    graph = None
+
+# Simple in-memory cache for graph queries (reduces Neo4j Aura calls)
+@lru_cache(maxsize=100)
+def _cached_get_related_papers(entity_id, limit=20):
+    """Cached wrapper for get_related_papers to reduce Neo4j calls."""
+    if graph:
+        try:
+            return tuple(graph.get_related_papers(entity_id, limit))  # tuple for hashability
+        except Exception as e:
+            warnings.warn(f"Graph query failed: {e}", RuntimeWarning)
+            return tuple()
+    return tuple()
+
+@lru_cache(maxsize=50)
+def _cached_get_entity_by_name(name):
+    """Cached wrapper for get_entity_by_name."""
+    if graph:
+        try:
+            return graph.get_entity_by_name(name)
+        except Exception as e:
+            warnings.warn(f"Graph query failed: {e}", RuntimeWarning)
+            return None
+    return None
 
 # -----------------------------------
 # Query Classification Rules
@@ -140,23 +170,55 @@ def run_sql_query(user_query):
 
 def run_graph_query(user_query):
     """
-    Simple placeholder-based graph fetch.
+    Query the knowledge graph (Neo4j or placeholder).
+    Returns entities or related papers based on query.
     """
+    if not graph:
+        return {"type": "graph", "error": "Graph client unavailable", "result": []}
 
     q = user_query.lower()
 
-    # "entities"
-    if "entity" in q or "entities" in q:
-        return {"type": "graph", "entities": graph.get_entities()}
+    try:
+        # "entities" or "show entities"
+        if "entity" in q or "entities" in q:
+            # Extract entity type if specified
+            entity_type = None
+            if "gene" in q:
+                entity_type = "gene"
+            elif "protein" in q:
+                entity_type = "protein"
+            elif "organism" in q:
+                entity_type = "organism"
+            elif "condition" in q:
+                entity_type = "condition"
+            
+            entities = graph.get_entities(entity_type=entity_type, limit=50)
+            return {"type": "graph", "entities": entities}
 
-    # "related to X"
-    match = re.search(r"related to (\w+)", q)
-    if match:
-        ent = match.group(1)
-        papers = graph.get_related_papers(ent)
-        return {"type": "graph", "papers": papers}
+        # "related to X" - find entity by name and get papers
+        match = re.search(r"related to (\w+)", q)
+        if match:
+            entity_name = match.group(1)
+            entity = _cached_get_entity_by_name(entity_name)
+            if entity:
+                papers = list(_cached_get_related_papers(entity['entity_id']))
+                return {
+                    "type": "graph",
+                    "entity": entity,
+                    "papers": papers
+                }
+            else:
+                return {
+                    "type": "graph",
+                    "error": f"Entity '{entity_name}' not found",
+                    "result": []
+                }
 
-    return {"type": "graph", "result": []}
+        return {"type": "graph", "result": []}
+    
+    except Exception as e:
+        warnings.warn(f"Graph query failed: {e}", RuntimeWarning)
+        return {"type": "graph", "error": str(e), "result": []}
 
 
 # -----------------------------------
@@ -166,34 +228,50 @@ def run_graph_query(user_query):
 def run_hybrid_query(user_query):
     """
     Graph → paper_ids → SQL filtering
+    Combines knowledge graph entity relationships with SQL paper database.
     """
+    if not graph:
+        # Fallback to SQL-only if graph unavailable
+        return run_sql_query(user_query)
 
-    # Step 1: get graph-based papers
-    match = re.search(r"related to (\w+)", user_query.lower())
-    related_papers = []
-    if match:
-        ent = match.group(1)
-        related_papers = graph.get_related_papers(ent)   # returns paper_ids
+    try:
+        # Step 1: get graph-based papers (entity → related papers)
+        match = re.search(r"related to (\w+)", user_query.lower())
+        related_papers = []
+        entity_info = None
+        
+        if match:
+            entity_name = match.group(1)
+            entity = _cached_get_entity_by_name(entity_name)
+            if entity:
+                entity_info = entity
+                related_papers = list(_cached_get_related_papers(entity['entity_id']))
 
-    # Step 2: SQL filter (example: cluster or year)
-    sql_results = run_sql_query(user_query)
+        # Step 2: SQL filter (example: cluster or year)
+        sql_results = run_sql_query(user_query)
 
-    # Step 3: intersection
-    combined = []
+        # Step 3: intersection of graph papers and SQL results
+        combined = []
 
-    if "papers" in sql_results:
-        sql_papers = sql_results["papers"]
-        if related_papers:
-            combined = [p for p in sql_papers if p["paper_id"] in related_papers]
-        else:
-            combined = sql_papers
+        if "papers" in sql_results:
+            sql_papers = sql_results["papers"]
+            if related_papers:
+                # Filter SQL papers to only those mentioned in graph
+                combined = [p for p in sql_papers if p["paper_id"] in related_papers]
+            else:
+                combined = sql_papers
 
-    return {
-        "type": "hybrid",
-        "graph_papers": related_papers,
-        "sql": sql_results,
-        "combined": combined
-    }
+        return {
+            "type": "hybrid",
+            "entity": entity_info,
+            "graph_papers": related_papers,
+            "sql": sql_results,
+            "combined": combined
+        }
+    
+    except Exception as e:
+        warnings.warn(f"Hybrid query failed, falling back to SQL: {e}", RuntimeWarning)
+        return run_sql_query(user_query)
 
 
 # -----------------------------------

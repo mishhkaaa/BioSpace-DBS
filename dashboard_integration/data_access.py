@@ -5,12 +5,13 @@ Dashboard Data Access Layer.
 Provides clean functions for Streamlit / UI to read SQL + Graph data.
 """
 
+import warnings
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from pathlib import Path
 
 from sql.models import Paper, Summary, Keyword, Cluster
-from nosql.graph_placeholder import GraphPlaceholder
+from nosql import GraphClient  # Hot-swappable adapter
 
 # -------------------------
 # Initialize DB + Graph
@@ -20,7 +21,12 @@ DB_PATH = Path(__file__).resolve().parents[1] / "sql" / "space_bio.db"
 engine = create_engine(f"sqlite:///{DB_PATH}")
 Session = sessionmaker(bind=engine)
 
-graph = GraphPlaceholder()
+# Initialize graph client with error handling
+try:
+    graph = GraphClient()
+except Exception as e:
+    warnings.warn(f"Failed to initialize graph client: {e}. Graph features will be unavailable.", RuntimeWarning)
+    graph = None
 
 
 # -------------------------
@@ -115,10 +121,45 @@ def get_cluster_papers(cluster_id):
 # -------------------------
 
 def get_entities(entity_type=None, limit=20):
-    """Proxy to graph placeholder."""
-    return graph.get_entities(entity_type, limit)
+    """Get entities from knowledge graph (Neo4j or placeholder)."""
+    if not graph:
+        return []
+    try:
+        return graph.get_entities(entity_type, limit)
+    except Exception as e:
+        warnings.warn(f"Failed to get entities: {e}", RuntimeWarning)
+        return []
 
 
 def get_related_papers_from_graph(entity_id):
-    """Proxy to graph placeholder."""
-    return graph.get_related_papers(entity_id)
+    """Get papers related to an entity from knowledge graph."""
+    if not graph:
+        return []
+    try:
+        return graph.get_related_papers(entity_id)
+    except Exception as e:
+        warnings.warn(f"Failed to get related papers: {e}", RuntimeWarning)
+        return []
+
+
+def get_entity_relations(entity_id, relation_type=None):
+    """Get entity relations from knowledge graph."""
+    if not graph:
+        return []
+    try:
+        return graph.get_entity_relations(entity_id, relation_type)
+    except Exception as e:
+        warnings.warn(f"Failed to get entity relations: {e}", RuntimeWarning)
+        return []
+
+
+def is_graph_available():
+    """Check if graph client is available and working."""
+    if not graph:
+        return False
+    try:
+        # Try a lightweight query
+        graph.get_entities(limit=1)
+        return True
+    except Exception:
+        return False
