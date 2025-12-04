@@ -446,29 +446,7 @@ def render_knowledge_graph_tab():
     st.header("🕸️ Knowledge Graph")
     st.markdown("Explore the biomedical entity knowledge graph extracted from research papers.")
     
-    # Check graph availability
-    graph_available = is_graph_available()
-    
-    # Status indicator
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        st.markdown("### Graph Status")
-    with col2:
-        if graph_available:
-            st.success("🟢 Available")
-        else:
-            st.warning("🟡 Placeholder Mode")
-    
-    if not graph_available:
-        st.info("""
-        **Note:** Knowledge graph is currently in placeholder mode. 
-        To connect to the real Neo4j knowledge graph:
-        1. Set `KG_ADAPTER=neo4j` in your `.env` file
-        2. Configure Neo4j credentials (NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
-        3. Restart the dashboard
-        """)
-    
-    # Neo4j Browser Button (always visible)
+    # Neo4j Browser Button
     st.markdown("### 🌐 External Neo4j Browser")
     st.markdown("""
     Open the full Neo4j Browser to explore the knowledge graph with advanced Cypher queries and visualizations.
@@ -492,99 +470,18 @@ def render_knowledge_graph_tab():
     pyvis_html_path = Path(__file__).resolve().parents[1] / "ner_pipeline" / "knowledge_graph_full.html"
     
     if pyvis_html_path.exists():
-        # Read and display the HTML
+        # Read and display the HTML with timestamp to prevent caching
         with open(pyvis_html_path, 'r', encoding='utf-8') as f:
             html_content = f.read()
         
-        st.components.v1.html(html_content, height=850, scrolling=True)
+        st.components.v1.html(html_content, height=700, scrolling=True)
         
-        st.caption("💡 Tip: Click and drag nodes to explore. Hover over nodes for details.")
+        st.caption("💡 Tip: Click any node to view details. Drag to explore, hover for info.")
     else:
         st.warning(f"Visualization file not found: {pyvis_html_path}")
         st.info("The PyVis HTML visualization should be located at `ner_pipeline/knowledge_graph_full.html`")
     
     st.markdown("---")
-    
-    # Entity Explorer
-    st.markdown("### 🔍 Entity Explorer")
-    
-    col1, col2 = st.columns([1, 1])
-    
-    with col1:
-        entity_type = st.selectbox(
-            "Filter by Entity Type",
-            ["All Types", "gene", "protein", "organism", "condition", "tissue", 
-             "cell_type", "chemical", "disease", "assay"],
-            index=0
-        )
-    
-    with col2:
-        limit = st.slider("Number of entities to display", 10, 100, 20)
-    
-    # Fetch entities
-    try:
-        entity_type_param = None if entity_type == "All Types" else entity_type
-        entities = get_entities(entity_type=entity_type_param, limit=limit)
-        
-        if entities:
-            st.success(f"Found {len(entities)} entities")
-            
-            # Convert to DataFrame for better display
-            df_entities = pd.DataFrame(entities)
-            
-            # Reorder columns for better readability
-            column_order = ['name', 'type', 'importance_score', 'paper_count', 'relation_count', 'entity_id']
-            df_entities = df_entities[column_order]
-            
-            # Display as interactive table
-            st.dataframe(
-                df_entities,
-                use_container_width=True,
-                hide_index=True,
-                column_config={
-                    "name": st.column_config.TextColumn("Entity Name", width="medium"),
-                    "type": st.column_config.TextColumn("Type", width="small"),
-                    "importance_score": st.column_config.NumberColumn("Importance", format="%.1f"),
-                    "paper_count": st.column_config.NumberColumn("Papers", format="%d"),
-                    "relation_count": st.column_config.NumberColumn("Relations", format="%d"),
-                    "entity_id": st.column_config.TextColumn("ID", width="small")
-                }
-            )
-            
-            # Entity detail view
-            st.markdown("#### 🔬 Entity Details")
-            selected_entity = st.selectbox(
-                "Select an entity to view details",
-                options=entities,
-                format_func=lambda x: f"{x['name']} ({x['type']})",
-                index=0
-            )
-            
-            if selected_entity:
-                col1, col2, col3 = st.columns(3)
-                with col1:
-                    st.metric("Importance Score", f"{selected_entity['importance_score']:.1f}")
-                with col2:
-                    st.metric("Paper Count", selected_entity['paper_count'])
-                with col3:
-                    st.metric("Relations", selected_entity['relation_count'])
-                
-                # Get relations for this entity
-                if graph_available:
-                    with st.expander("🔗 View Relations", expanded=False):
-                        relations = get_entity_relations(selected_entity['entity_id'])
-                        if relations:
-                            st.write(f"Found {len(relations)} relations:")
-                            df_relations = pd.DataFrame(relations)
-                            st.dataframe(df_relations, use_container_width=True, hide_index=True)
-                        else:
-                            st.info("No relations found for this entity.")
-        else:
-            st.info("No entities found. Check your graph connection or filter settings.")
-    
-    except Exception as e:
-        st.error(f"Error fetching entities: {e}")
-        st.exception(e)
 
 # -------------------------
 # Main App

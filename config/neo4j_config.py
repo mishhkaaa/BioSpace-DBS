@@ -19,6 +19,6 @@ def get_neo4j_config():
     """
     return {
         'uri': os.getenv('NEO4J_URI'),
-        'user': os.getenv('NEO4J_USERNAME', 'neo4j'),
+        'user': os.getenv('NEO4J_USER', 'neo4j'),
         'password': os.getenv('NEO4J_PASSWORD')
     }
