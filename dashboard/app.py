@@ -482,6 +482,84 @@ def render_knowledge_graph_tab():
         st.info("The PyVis HTML visualization should be located at `ner_pipeline/knowledge_graph_full.html`")
     
     st.markdown("---")
+    
+    # Natural Language Query Section
+    st.markdown("### 🔍 Natural Language Query")
+    st.markdown("Ask questions about the knowledge graph in plain English.")
+    
+    # Import NL to Cypher converter
+    from nosql.nl_to_cypher import NLToCypherConverter, execute_cypher_query
+    from nosql import GraphClient
+    
+    converter = NLToCypherConverter()
+    
+    # Show example queries
+    with st.expander("💡 Example Queries", expanded=False):
+        examples = converter.get_example_queries()
+        cols = st.columns(2)
+        for i, example in enumerate(examples):
+            with cols[i % 2]:
+                if st.button(example, key=f"example_{i}", use_container_width=True):
+                    st.session_state.query_input = example
+    
+    # Query input
+    query_input = st.text_input(
+        "Enter your query:",
+        placeholder="e.g., What affects bone?",
+        value=st.session_state.get("query_input", "")
+    )
+    
+    col1, col2 = st.columns([1, 5])
+    with col1:
+        run_query = st.button("🔍 Run Query", type="primary", use_container_width=True)
+    with col2:
+        if query_input:
+            # Show conversion preview
+            result = converter.convert(query_input)
+            if result and len(result) == 3:
+                cypher, explanation, params = result
+                if cypher:
+                    st.caption(f"✨ {explanation}")
+    
+    # Execute query
+    if run_query and query_input:
+        result = converter.convert(query_input)
+        
+        if result and len(result) == 3:
+            cypher, explanation, params = result
+            st.info(f"🔄 {explanation}")
+            
+            try:
+                # Execute via GraphClient
+                graph = GraphClient()
+                
+                with st.spinner("Executing query..."):
+                    results = execute_cypher_query(cypher, graph, params)
+                
+                graph.close()
+                
+                if results:
+                    st.success(f"✅ Found {len(results)} results")
+                    
+                    # Display results as DataFrame
+                    df_results = pd.DataFrame(results)
+                    st.dataframe(df_results, use_container_width=True, hide_index=True)
+                    
+                    # Show generated Cypher query
+                    with st.expander("🔧 Generated Cypher Query", expanded=False):
+                        st.code(cypher, language="cypher")
+                else:
+                    st.warning("No results found. Try a different query.")
+            
+            except Exception as e:
+                st.error(f"❌ Query failed: {str(e)}")
+                with st.expander("🔧 Debug Info"):
+                    st.code(cypher, language="cypher")
+                    st.exception(e)
+        else:
+            st.warning("❓ Sorry, I couldn't understand that query. Try one of the examples above or rephrase your question.")
+    
+    st.markdown("---")
 
 # -------------------------
 # Main App
