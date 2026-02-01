@@ -80,3 +80,10 @@ class Cluster(Base):
     representative_keyword = Column(String)
 
     papers = relationship("Paper", secondary=paper_cluster, back_populates="clusters")
+
+
+class Dummy(Base):
+    __tablename__ = "dummy"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    info = Column(String)
